@@ -15,18 +15,18 @@
     </div>
   <% end %>
  
-  <p>
+  <div>
     <%= form.label :title %><br>
-    <%= form.text_field :title %>
-  </p>
+    <%= form.text_field :title, class:"input-field" %>
+  </div>
  
-  <p>
+  <div>
     <%= form.label :text %><br>
     <%= form.text_area :text %>
-  </p>
+  </div>
  
-  <p>
+  <div class="btn-container">
     <%= form.submit %>
-  </p>
+  </div>
  
 <% end %>
