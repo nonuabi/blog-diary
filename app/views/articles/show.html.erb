@@ -26,35 +26,10 @@
                 </p>
             </div>
             <div class="comment_create">
-                <%= form_with(model: [@article, @article.comments.build], local: true) do |form|%>
-                    <div class="comment_form">
-                        <lable> Write your comments here...</lable>
-                        <br/>
-                        <div class="input-section">
-                            <%= form.text_field :commenter ,class:"name_field", placeholder:"Your Name" %>
-                            <%= form.text_field :body, class:"comment_field", placeholder:"Your Comment" %>
-                            <%= form.submit class:'btn' %>
-                        </div>
-                    </div>
-                <% end %>
+               <%= render 'comments/form' %>
             </div>
             <div class='view_comments-section'>
-                <% @article.comments.each do |comment| %>
-                    <div class="comment-item">
-                        <div class="">
-                            <i class="fas fa-user fa-2x "></i>        
-                        </div>
-                        <div class="guest_comment-section">
-                            <div>
-                                <p class="guest-name"><%= comment.commenter%></p>
-                            </div>
-                            <div>
-                                <p class="guest-content"><%= comment.body%></p>      
-                            </div>
-                        </div>     
-                    </div>     
-                       
-                <% end %>
+               <%= render 'comments/comment' %>
             <div>
     </section>       
 </div>
