@@ -1,16 +1,19 @@
  <% @article.comments.each do |comment| %>
-                    <div class="comment-item">
-                        <div class="">
-                            <i class="fas fa-user fa-2x "></i>        
-                        </div>
-                        <div class="guest_comment-section">
-                            <div>
-                                <p class="guest-name"><%= comment.commenter%></p>
-                            </div>
-                            <div>
-                                <p class="guest-content"><%= comment.body%></p>      
-                            </div>
-                        </div>     
-                    </div>     
-                       
+    <div class="comment-item">
+        <div>
+            <i class="fas fa-user fa-2x "></i>        
+        </div>
+        <div class="guest_comment-section">
+            <div class="comment-header">
+                <p class="guest-name"><%= comment.commenter%></p>
+                <%= link_to [comment.article, comment], method: :delete, data: {confirm: 'Are you sure?'} do %>
+                    <i class="fas fa-trash"></i>
                 <% end %>
+            </div>
+            <div>
+                <p class="guest-content"><%= comment.body%></p>      
+            </div>
+        </div>     
+    </div>     
+                       
+<% end %>
