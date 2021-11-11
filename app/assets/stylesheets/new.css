@@ -1,6 +1,66 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .new_article-main {
+  margin-top: 2rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+}
+.index-main {
+  width: 750px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #898989;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  line-height: 1.85;
+  font-weight: 400;
+}
+.article-section {
+  margin-top: 50px;
+}
+.entry-section {
+  display: flex;
+  justify-content: space-between;
+}
+.action-section {
+  width: 50%;
+}
+.link-container {
+  display: flex;
+  justify-content: end;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  margin: 0 1rem;
+  color: rgba(246, 60, 78, 0.7);
+}
+a:hover {
+  color: #ff0026;
+}
+.view_comments-section {
+  display: flex;
+  align-items: center;
+}
+.guest-name {
+  margin: 0;
+  padding: 0;
+  color: rgba(246, 60, 78, 0.7);
+}
+.guest-content {
+  padding: 0;
+  margin: 0;
+}
+
+.guest_comment-section {
+  padding-left: 10px;
 }

@@ -1,7 +1,18 @@
 .navbar_heading {
   text-align: center;
-  padding: 30px 0;
+  padding: 20px 0;
   border-bottom: 1px solid #ebebeb;
   font-family: "Sacramento", cursive;
   font-size: 2rem;
+}
+.navbar-list-section {
+  border-bottom: 1px solid #ebebeb;
+  height: 50px;
+  padding: 10px 0;
+}
+.navbar-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }

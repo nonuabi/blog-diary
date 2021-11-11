@@ -33,7 +33,7 @@
 }
 
 .byline {
-  margin-top: 50px;
+  // margin-top: 50px;
   display: inline-block;
   color: rgba(246, 60, 78, 0.7);
 }
@@ -46,10 +46,6 @@
   font-weight: 400;
   font-family: "Droid Serif", serif;
   color: #333;
-}
-p {
-  margin-top: 0;
-  margin-bottom: 1.5em;
 }
 
 .entry-content {
@@ -107,11 +103,4 @@ button:hover {
   padding-left: 20px;
   margin-top: -26px;
 }
-.guest-name {
-  color: rgba(246, 60, 78, 0.7);
-  margin-bottom: 10px;
-  margin-top: 0;
-}
-.article_item {
-  border-bottom: 1px solid #efefef;
-}
+
