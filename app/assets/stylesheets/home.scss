@@ -60,7 +60,7 @@
   justify-content: space-between;
 }
 input {
-  width: 40%;
+  width: 32%;
   padding: 10px 25px;
   background: transparent;
   columns: #666;
@@ -78,21 +78,6 @@ input:focus {
   border: 1px solid #ff516b;
 }
 
-button {
-  line-height: 22pt;
-  padding: 0 20px;
-  border: 1px solid #ffdfe4;
-  color: #898989;
-  font-family: "Work Sans", sans-serif;
-  display: inline-block;
-  background: white;
-  background: rgba(182, 43, 57, 0.767);
-  color: white;
-}
-button:hover {
-  background: rgb(219, 61, 77);
-  color: white;
-}
 .comment_list {
   padding: 25px 0;
   margin-bottom: 35px;
@@ -103,4 +88,3 @@ button:hover {
   padding-left: 20px;
   margin-top: -26px;
 }
-

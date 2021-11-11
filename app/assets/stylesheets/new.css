@@ -47,9 +47,10 @@ a {
 a:hover {
   color: #ff0026;
 }
-.view_comments-section {
+.comment-item {
   display: flex;
   align-items: center;
+  margin: 0.5rem 0;
 }
 .guest-name {
   margin: 0;

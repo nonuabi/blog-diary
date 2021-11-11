@@ -10,10 +10,6 @@
                             <%= link_to edit_article_path(@article) do %>
                                 <i class="fas fa-pencil-alt"></i>
                             <% end %>
-
-                            <%= link_to article_path(@article) , class:"disable" do %>
-                                <i class="far fa-eye disable"></i>
-                            <% end %>
                             <%= link_to article_path(@article), method: :delete, data: {confirm: 'Are you sure?'} do %>
                                 <i class="fas fa-trash"></i>
                             <% end %>
@@ -30,29 +26,35 @@
                 </p>
             </div>
             <div class="comment_create">
-                <form class="comment_form">
-                    <lable> Write your comments here...</lable>
-                    <br/>
-                    <div class="input-section">
-                        <input class="name_field" type="text" placeholder="Your Name">
-                        <input class="comment_field" type="text" placeholder="Your Comment">
-                        <button type="submit"> Add Comment</button>
+                <%= form_with(model: [@article, @article.comments.build], local: true) do |form|%>
+                    <div class="comment_form">
+                        <lable> Write your comments here...</lable>
+                        <br/>
+                        <div class="input-section">
+                            <%= form.text_field :commenter ,class:"name_field", placeholder:"Your Name" %>
+                            <%= form.text_field :body, class:"comment_field", placeholder:"Your Comment" %>
+                            <%= form.submit class:'btn' %>
+                        </div>
                     </div>
-                </form>
+                <% end %>
             </div>
             <div class='view_comments-section'>
-                <div class="">
-                    <i class="fas fa-user fa-2x "></i>        
-                </div>
-                <div class="guest_comment-section">
-                    <div>
-                        <p class="guest-name">Veni</p>
-                    </div>
-                    <div>
-                          <p class="guest-content">  Ipsum officia ea id irure eiusmod do aliquip excepteur duis.</p>      
-                    </div>
-                </div>
-                                
+                <% @article.comments.each do |comment| %>
+                    <div class="comment-item">
+                        <div class="">
+                            <i class="fas fa-user fa-2x "></i>        
+                        </div>
+                        <div class="guest_comment-section">
+                            <div>
+                                <p class="guest-name"><%= comment.commenter%></p>
+                            </div>
+                            <div>
+                                <p class="guest-content"><%= comment.body%></p>      
+                            </div>
+                        </div>     
+                    </div>     
+                       
+                <% end %>
             <div>
     </section>       
 </div>
