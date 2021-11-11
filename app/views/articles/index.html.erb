@@ -12,9 +12,6 @@
                                 <i class="fas fa-pencil-alt"></i>
                             <% end %>
 
-                            <%= link_to article_path(article) do %>
-                                <i class="far fa-eye"></i>
-                            <% end %>
                             <%= link_to article_path(article), method: :delete, data: {confirm: 'Are you sure?'} do %>
                                 <i class="fas fa-trash"></i>
                             <% end %>
@@ -26,35 +23,16 @@
                 </h2>
             </header>
             <div class="entry-content">
-                <p>
+                
+                <p class="guest-content">
                     <%= article.text%>
                 </p>
+                <p>
+                
+                <%= link_to "click here to add comment..." ,article_path(article)  %>
+                </p>                    
             </div>
-            <div class="comment_create">
-                <form class="comment_form">
-                    <lable> Write your comments here...</lable>
-                    <br/>
-                    <div class="input-section">
-                        <input class="name_field" type="text" placeholder="Your Name">
-                        <input class="comment_field" type="text" placeholder="Your Comment">
-                        <button type="submit"> Add Comment</button>
-                    </div>
-                </form>
-            </div>
-            <div class='view_comments-section'>
-                <div class="">
-                    <i class="fas fa-user fa-2x"></i>        
-                </div>
-                <div class="guest_comment-section">
-                    <div>
-                        <p class="guest-name">Veni</p>
-                    </div>
-                    <div>
-                          <p class="guest-content">  Ipsum officia ea id irure eiusmod do aliquip excepteur duis.</p>      
-                    </div>
-                </div>
-                                
-            <div>
+            
         </section>       
     <% end %>
 </div>
