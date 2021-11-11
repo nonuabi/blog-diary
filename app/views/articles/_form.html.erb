@@ -15,18 +15,18 @@
     </div>
   <% end %>
  
-  <div>
-    <%= form.label :title %><br>
+  <div class="mb-3">
+    <%= form.label :title,  class:"form-label" %><br>
     <%= form.text_field :title, class:"input-field" %>
   </div>
  
-  <div>
-    <%= form.label :text %><br>
+  <div class="mb-3">
+    <%= form.label :text, class:"form-label" %><br>
     <%= form.text_area :text %>
   </div>
  
-  <div class="btn-container">
-    <%= form.submit %>
+  <div class="btn-container mb-3">
+    <%= form.submit class:"btn" %>
   </div>
  
 <% end %>
