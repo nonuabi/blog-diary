@@ -24,7 +24,7 @@ textarea:focus {
   font-family: "Work Sans", sans-serif;
   display: inline-block;
   background: white;
-  background: rgb(206, 53, 68);
+  background: #f2711c;
   color: white;
 }
 .btn:hover {

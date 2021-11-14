@@ -1,11 +1,26 @@
-<div >
-    <div class="navbar_heading">
-        <h1> Blog Diary</h1>
-    </div>
-    <div class="navbar-list-section">
-        <div class="navbar-items">
-            <%= link_to 'Home', '/' %>
-            <%= link_to 'New article', new_article_path %>
+<div class="ui small inverted menu">
+    <div class="ui container">
+        <%= link_to 'Home', root_path, class:"item"%>
+            
+        <%= link_to 'New Article', new_article_path, class:"item"%>
+
+        <div class="right menu">
+        
+            <%if current_user%>
+                <div class="item">
+                    <%= link_to 'Log Out', destroy_user_session_path, method: :delete,class:"ui orange button" %>    
+                </div>
+            <% else %>
+                <div class="item">
+                    <%= link_to 'Log In', new_user_session_path,class:"ui orange button" %>    
+                </div>
+                <div class="item">
+                    <%= link_to 'Sign Up', new_user_registration_path,class:"ui orange button" %>    
+                </div>
+            <% end %>
+           
+            
         </div>
-    </div>    
+    </div>
 </div>
+

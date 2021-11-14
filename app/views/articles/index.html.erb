@@ -1,3 +1,4 @@
+<%= render 'articles/header'%>
 <div class="index-main">
     <% @articles.each do |article| %>
         <section class="article-section">
@@ -29,7 +30,7 @@
                 </p>
                 <p>
                 
-                <%= link_to "click here to add comment..." ,article_path(article)  %>
+                <%= link_to "click here to add comment..." ,article_path(article), class:"custom_link"  %>
                 </p>                    
             </div>
             

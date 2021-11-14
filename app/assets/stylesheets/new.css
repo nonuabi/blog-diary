@@ -42,10 +42,10 @@
 a {
   text-decoration: none;
   margin: 0 1rem 0 0;
-  color: rgb(246, 60, 79);
+  color: black;
 }
 a:hover {
-  color: #ff0026;
+  color: black;
 }
 .comment-item {
   display: flex;
@@ -65,4 +65,7 @@ a:hover {
 .guest_comment-section {
   padding-left: 10px;
   width: 100%;
+}
+#mouse {
+  cursor: context-menu;
 }
